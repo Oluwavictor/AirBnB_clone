@@ -73,5 +73,4 @@ EOF  help  quit
 $
 ```
 ## Contributors
-Eze Taslim Chiemelie
-Bamgbade Adeyinka Victor
+Eze Taslim Chiemelie and Bamgbade Adeyinka Victor
