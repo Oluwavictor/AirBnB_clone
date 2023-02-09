@@ -1,4 +1,4 @@
-# AirBnB Clone ― The ALX-Holberton BnB
+# AirBnB Clone Project
 
 ## Description of the project
 The goal of the project is to deploy a replica of the [Airbnb Website](https://www.airbnb.com/) using my server. The final version of this project will have:
