@@ -18,13 +18,19 @@ class BaseModel:
         Return:
         None
         '''
-        if len(kwargs):
-            for key in kwargs:
-                value = kwargs[key]
+
+        DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
+
+        if len(kwargs) != 0:
+            for key, value in kwargs.items():
                 if key != "__class__":
-                    self.__setattr__(key, value)
-                if key in ["created_at", "updated_at"]:
-                    self.__setattr__(key, datetime.fromisoformat(value))
+                    if key in ("created_at", "updated_at"):
+                        self.__dict__[key] = datetime.strptime(
+                            value, DATE_FORMAT)
+                    elif key[0] == "id":
+                        delf.__dict__[key] = str(value)
+                    else:
+                        self.__dict__[key] = str(value)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
