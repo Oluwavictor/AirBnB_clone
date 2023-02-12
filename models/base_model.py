@@ -18,12 +18,13 @@ class BaseModel:
         Return:
         None
         '''
-        if len(kwargs) != 0:
-            self.__dict__ = kwargs
-            self.created_at = datetime.strptime(self.created_at,
-                                                "%Y-%m-%dT%H:%M:%S.%f")
-            self.updated_at = datetime.strptime(self.updated_at,
-                                                "%Y-%m-%dT%H:%M:%S.%f")
+        if len(kwargs):
+            for key in kwargs:
+                value = kwargs[key]
+                if key != "__class__":
+                    self.__setattr__(key, value)
+                if key in ["created_at", "updated_at"]:
+                    self.__setattr__(key, datetime.fromisoformat(value))
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
@@ -45,9 +46,9 @@ class BaseModel:
 
     def to_dict(self):
         ''' returns dictonary with all key values of instance '''
-        mydict = self.__dict__.copy()
+        mydict = {**self.__dict__}
         mydict['__class__'] = self.__class__.__name__
-        mydict['created_at'] = self.created_at.isoformat()
-        mydict['updated_at'] = self.updated_at.isoformat()
+        mydict['created_at'] = datetime.isoformat(self.created_at)
+        mydict['updated_at'] = datetime.isoformat(self.updated_at)
 
         return mydict
