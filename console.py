@@ -46,8 +46,8 @@ class HBNBCommand(cmd.Cmd):
         if len(classname) == 0:
             print('** class name missing **')
         elif classname not in self.myclasses:
-                print('** class doesn\'t exist **')
-                return False
+            print('** class doesn\'t exist **')
+            return False
         else:
             new = eval("{}()".format(classname))
             new.save()
@@ -178,7 +178,7 @@ class HBNBCommand(cmd.Cmd):
             try:
                 setattr(clschange, attributename, float(updatevalue))
                 storage.save()
-            except:
+            except ValueError:
                 setattr(clschange, attributename, str(updatevalue))
                 storage.save()
 
