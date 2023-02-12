@@ -28,7 +28,7 @@ class BaseModel:
                         self.__dict__[key] = datetime.strptime(
                             value, DATE_FORMAT)
                     elif key[0] == "id":
-                        delf.__dict__[key] = str(value)
+                        self.__dict__[key] = str(value)
                     else:
                         self.__dict__[key] = str(value)
         else:
