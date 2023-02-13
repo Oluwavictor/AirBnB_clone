@@ -1,1 +1,15 @@
-{"BaseModel.eb077b86-485a-4088-b93c-00ad015bd422": {"id": "eb077b86-485a-4088-b93c-00ad015bd422", "created_at": "2023-02-12T08:37:13.205793", "updated_at": "2023-02-12T08:37:13.205799", "__class__": "BaseModel"}, "BaseModel.b1d977e8-d40f-41d6-a5ad-8cbf7e2341c2": {"id": "b1d977e8-d40f-41d6-a5ad-8cbf7e2341c2", "created_at": "2023-02-12T08:38:52.837964", "updated_at": "2023-02-12T08:38:52.837989", "__class__": "BaseModel"}, "BaseModel.b43f7bdb-bca1-45ab-88f9-012cedc6c81e": {"id": "b43f7bdb-bca1-45ab-88f9-012cedc6c81e", "created_at": "2023-02-12T08:57:27.053517", "updated_at": "2023-02-12T08:57:27.053649", "name": "My First Model", "my_number": 89, "__class__": "BaseModel"}}
+{
+    "User.e2b78716-5631-407f-b186-706209034cdc": {
+        "id": "e2b78716-5631-407f-b186-706209034cdc",
+        "created_at": "2023-02-13T00:15:51.496480",
+        "updated_at": "2023-02-13T00:15:51.496502",
+        "__class__": "User"
+    },
+    "State.c9321fb4-694b-4573-ac9e-75e9c25bc96c": {
+        "id": "c9321fb4-694b-4573-ac9e-75e9c25bc96c",
+        "created_at": "2023-02-13T00:39:03.534890",
+        "updated_at": "2023-02-13T00:39:33.354929",
+        "name": "Anambra",
+        "__class__": "State"
+    }
+}
