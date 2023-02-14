@@ -72,5 +72,3 @@ EOF  help  quit
 (hbnb)
 $
 ```
-## Contributors
-Eze Taslim Chiemelie and Bamgbade Adeyinka Victor
